@@ -1,16 +1,17 @@
+import Feedback from './Section';
+
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
-        justifyContent: 'center',
+        flexDirection: 'column',
         alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
+        fontSize: 35,
+        color: '#010101',
       }}
     >
-      React homework template
+      <Feedback title="Please leave feedback" />
     </div>
   );
 };

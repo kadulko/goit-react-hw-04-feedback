@@ -1,0 +1,11 @@
+.feedback-form {
+  padding: 35px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-header {
+  font-size: 305x;
+  margin: 15px auto 30px;
+}

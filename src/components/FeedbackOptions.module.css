@@ -1,0 +1,17 @@
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  padding: 8px 30px;
+  background-color: darkgray;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  text-transform: capitalize;
+}
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
