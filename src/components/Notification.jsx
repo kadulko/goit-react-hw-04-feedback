@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import css from './Notification.module.css';
+import style from './Notification.module.css';
 
 export class Notification extends Component {
-  static propTypes = {};
+  static propTypes = { message: PropTypes.string };
 
   render(props) {
     const { message } = this.props;
-    return <div className={css.notification}>{message}</div>;
+    return <div className={style.notification}>{message}</div>;
   }
 }
 

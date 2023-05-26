@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import css from './FeedbackOptions.module.css';
+import style from './FeedbackOptions.module.css';
 
 export class FeedbackOptions extends Component {
-  static propTypes = {};
-
   render(props) {
     const { options, onLeaveFeedback } = this.props;
     return (
-      <div className={css.buttons}>
+      <div className={style.buttons}>
         {options.map(option => (
           <button
-            className={css.button}
+            className={style.button}
             type="button"
             key={option}
             id={option}
@@ -24,5 +22,7 @@ export class FeedbackOptions extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = { state: PropTypes.object };
 
 export default FeedbackOptions;

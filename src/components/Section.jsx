@@ -1,19 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-import css from './Section.module.css';
+import style from './Section.module.css';
 import Statistics from './Statistics';
 import Notification from './Notification';
 import FeedbackOptions from './FeedbackOptions';
 
 export class Section extends Component {
-  static propTypes = {};
+  static propTypes = { title: PropTypes.string.isRequired };
 
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
+  state = this.props.state;
 
   addFeedback = evt => {
     const { id } = evt.target;
@@ -34,8 +30,8 @@ export class Section extends Component {
   render(props) {
     const { title } = this.props;
     return (
-      <div className={css['feedback-form']}>
-        <h4 className={css['form-header']}>{title}</h4>
+      <div className={style['feedback-form']}>
+        <h4 className={style['form-header']}>{title}</h4>
         <FeedbackOptions
           options={['good', 'neutral', 'bad']}
           onLeaveFeedback={this.addFeedback}
