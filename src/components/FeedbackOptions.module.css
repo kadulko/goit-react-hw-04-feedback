@@ -4,8 +4,9 @@
 }
 
 .button {
-  padding: 8px 30px;
-  background-color: darkgray;
+  padding: 8px 0px;
+  width: 100px;
+
   color: white;
   border: none;
   border-radius: 0px;

@@ -1,5 +1,5 @@
 .statistics {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .statistics h4 {
@@ -13,6 +13,6 @@
 
 .feedback {
   display: flex;
-  justify-content: space-between;
-  margin: 0px auto 10px;
+  justify-content: space-around;
+  margin: 0px auto 15px;
 }

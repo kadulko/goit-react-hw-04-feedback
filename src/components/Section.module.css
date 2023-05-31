@@ -1,11 +1,15 @@
 .feedback-form {
+  width: 350px;
+  margin: 0 auto;
   padding: 35px;
   border: 1px solid lightgray;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: rgba(30, 30, 30, 1);
 }
 
 .form-header {
-  font-size: 305x;
+  font-size: 30px;
+  text-align: center;
   margin: 15px auto 30px;
 }

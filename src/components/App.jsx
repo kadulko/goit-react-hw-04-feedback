@@ -1,23 +1,11 @@
-import Feedback from './Section';
+import Section from './Section';
 
 export const App = () => {
-  let state = {
+  const FEEDBACK = {
     good: 0,
     neutral: 0,
     bad: 0,
   };
 
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        fontSize: 35,
-        color: '#010101',
-      }}
-    >
-      <Feedback state={state} title="Please leave feedback" />
-    </div>
-  );
+  return <Section stats={FEEDBACK} title="Please leave feedback" />;
 };

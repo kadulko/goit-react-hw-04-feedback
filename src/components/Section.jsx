@@ -7,9 +7,18 @@ import Notification from './Notification';
 import FeedbackOptions from './FeedbackOptions';
 
 export class Section extends Component {
-  static propTypes = { title: PropTypes.string.isRequired };
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    stats: PropTypes.object.isRequired,
+  };
 
-  state = this.props.state;
+  state = this.props.stats;
+
+  options = [
+    { name: 'good', color: 'green' },
+    { name: 'neutral', color: 'goldenrod' },
+    { name: 'bad', color: 'firebrick' },
+  ];
 
   addFeedback = evt => {
     const { id } = evt.target;
@@ -27,13 +36,12 @@ export class Section extends Component {
     return total ? Math.round((this.state.good / total) * 100) : 0;
   };
 
-  render(props) {
-    const { title } = this.props;
+  render() {
     return (
       <div className={style['feedback-form']}>
-        <h4 className={style['form-header']}>{title}</h4>
+        <h4 className={style['form-header']}>{this.props.title}</h4>
         <FeedbackOptions
-          options={['good', 'neutral', 'bad']}
+          options={this.options}
           onLeaveFeedback={this.addFeedback}
         />
         {this.countTotalFeedback() ? (

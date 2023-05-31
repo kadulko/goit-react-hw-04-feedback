@@ -11,11 +11,12 @@ export class FeedbackOptions extends Component {
           <button
             className={style.button}
             type="button"
-            key={option}
-            id={option}
+            key={option.name}
+            style={{ backgroundColor: option.color }}
+            id={option.name}
             onClick={onLeaveFeedback}
           >
-            {option}
+            {option.name}
           </button>
         ))}
       </div>
