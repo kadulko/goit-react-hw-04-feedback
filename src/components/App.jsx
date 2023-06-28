@@ -1,5 +1,7 @@
 import Section from './Section/Section';
 
+//
+
 const App = () => {
   const FEEDBACK = {
     good: 0,
