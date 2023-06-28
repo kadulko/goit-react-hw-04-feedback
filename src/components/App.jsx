@@ -1,6 +1,6 @@
-import Section from './Section';
+import Section from './Section/Section';
 
-export const App = () => {
+const App = () => {
   const FEEDBACK = {
     good: 0,
     neutral: 0,
@@ -9,3 +9,5 @@ export const App = () => {
 
   return <Section stats={FEEDBACK} title="Please leave feedback" />;
 };
+
+export default App;
